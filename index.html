@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>Tic Tac Toe — Two Player</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-card" aria-labelledby="game-title">
+        <header class="hero">
+          <p class="eyebrow">Two player game</p>
+          <h1 id="game-title">Tic Tac Toe</h1>
+          <p class="subtitle">Take turns. Claim three in a row.</p>
+        </header>
+        <div class="game-layout">
+          <section class="match-panel" aria-label="Match information">
+            <section class="scoreboard" aria-label="Match scoreboard">
+              <article class="score player-x"><span class="player-label">Player X</span><strong id="x-score" aria-label="Player X score">0</strong></article>
+              <article class="score draws"><span class="player-label">Draws</span><strong id="draw-score" aria-label="Draw score">0</strong></article>
+              <article class="score player-o"><span class="player-label">Player O</span><strong id="o-score" aria-label="Player O score">0</strong></article>
+            </section>
+            <p id="game-status" class="game-status" role="status" aria-live="polite">Player X, your turn</p>
+          </section>
+          <section class="play-panel" aria-label="Game area">
+            <section id="board" class="board" aria-label="Tic tac toe board"></section>
+            <div class="actions"><button id="new-round" class="primary-button" type="button">New round</button><button id="reset-scores" class="text-button" type="button">Reset scores</button></div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
